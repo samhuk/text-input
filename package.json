@@ -1,7 +1,7 @@
 {
   "name": "@samhuk/text-input",
-  "version": "1.0.3",
-  "description": "Text input UI component",
+  "version": "1.0.4",
+  "description": "A vanilla JS text input UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -24,7 +24,7 @@
   },
   "author": "",
   "license": "MIT",
-  "repository": "https://github.com/samhuk/textInput",
+  "repository": "https://github.com/samhuk/text-input",
   "publishConfig": {
     "access": "public"
   },
