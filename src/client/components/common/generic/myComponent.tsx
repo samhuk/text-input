@@ -1,14 +1,15 @@
 import React from 'react'
-import { MyComponent, MyComponentOptions, createMyComponent } from '../../../../component'
+import { createTextInput } from '../../../../component'
+import { TextInputOptions, TextInput } from '../../../../component/types'
 import Com from './base'
 
 /**
- * Thin wrapper around the MyComponent component
+ * Thin wrapper around the TextInput component
  */
-export const render = (props: { options: MyComponentOptions, setComponent?: (component: MyComponent) => void }) => (
+export const render = (props: { options: TextInputOptions, setComponent?: (component: TextInput) => void }) => (
   <Com
     componentOptions={props.options}
-    createComponent={createMyComponent}
+    createComponent={createTextInput}
     setComponent={props.setComponent}
     name="component"
   />

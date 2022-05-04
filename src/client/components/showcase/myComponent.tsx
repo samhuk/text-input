@@ -1,26 +1,27 @@
 import React from 'react'
-import { MyComponent, MyComponentOptions } from '../../../component'
-import MyComponentWithReact from '../common/generic/myComponent'
+import { TextInput, TextInputOptions } from '../../../component/types'
+import TextInputWithReact from '../common/generic/myComponent'
 import ItemBase from './itemBase'
 
-const COMPONENT_OPTIONS: MyComponentOptions = {
-  initialText: 'Hello, World!'
+const COMPONENT_OPTIONS: TextInputOptions = {
+  initialValue: '',
+  label: 'My Text Input Label'
 }
 
-const Operations = (props: { component: MyComponent }) => (
+const Operations = (props: { component: TextInput }) => (
   <>
     <button
       type="button"
       className="button--white"
-      onClick={() => props.component.updateText('New text!')}
+      onClick={() => props.component.setValue('New text!')}
     >
-      Update the text of the component
+      Update the text value
     </button>
   </>
 )
 
 export const render = () => (
-  <ItemBase component={MyComponentWithReact} componentOptions={COMPONENT_OPTIONS} operationsComponent={Operations} />
+  <ItemBase component={TextInputWithReact} componentOptions={COMPONENT_OPTIONS} operationsComponent={Operations} />
 )
 
 export default render

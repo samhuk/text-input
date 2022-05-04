@@ -1,8 +1,65 @@
-// This is the entrypoint scss file for styling the component.
+.com-text-input {
+  position: relative;
 
-.com-my-component {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 5px;
+  &.uneditable {
+    cursor: pointer;
+  }
+
+  .com-text-input__label-wrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    label {
+      color: #555;
+      font-size: 12px;
+    }
+
+    .com-text-input__dirty-indicator {
+      margin-left: 10px;
+      margin-top: -3px;
+      font-size: 12px;
+      display: none;
+    }
+  }
+
+  &.dirty {
+    .com-text-input__dirty-indicator {
+      display: initial;
+    }
+  }
+
+  input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    font-size: 14px;
+
+    &:focus-visible {
+      box-shadow: none !important;
+      border: 1px solid #1F8ACC;
+    }
+  }
+
+  &.left-label-position {
+    display: flex;
+    align-items: center;
+
+    label {
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    .com-text-input__dirty-indicator {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    input {
+      margin-top: 0;
+    }
+  }
 }

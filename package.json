@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "@samhuk/text-input",
   "version": "1.0.0",
-  "description": "my-component description",
+  "description": "Text input UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -23,6 +23,10 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": "https://github.com/samhuk/textInput",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "drag-resistant-click-listener": "^1.0.1"
   },
